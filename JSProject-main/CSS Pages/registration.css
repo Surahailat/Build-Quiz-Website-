@@ -1,0 +1,237 @@
+body {
+    background-color: #afc1c7;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --main-color: #0a4556 ;
+    --second-color: #afc1c7;
+    --section-padding: 100px;
+    --para-color: #3d6b77;
+}
+
+
+/* Start Header */
+
+ul {
+    list-style: none;
+
+}
+
+.navbar {
+    padding: 0px;
+
+}
+
+.container-fluid {
+    background-color: var(--main-color);
+}
+
+.navbar-brand {
+    margin-left: 7%;
+    margin-top: 5px;
+}
+
+/* in mobile make it in center */
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+
+
+}
+
+
+
+#navbarNav ul li {
+    transition: transform 0.2s ease-in;
+    font-weight: 600;
+}
+
+#navbarNav ul li:hover {
+    transform: scale(1.2);
+
+}
+
+#navbarNav ul li a {
+    color: #fff;
+}
+
+
+#login {
+    margin-left: 20px;
+}
+
+#register,
+#login {
+    background-color: --main-color;
+    color: var(--main-color);
+    padding: 5px;
+    border-radius: 15%;
+    border: 1px solid #fff;
+    margin-top: -8px;
+
+
+}
+#register:hover,
+#login:hover {
+    color:#fff;
+    background-color: var(--main-color);
+}
+
+@media (max-width: 426px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .navbar-collapse ul li {
+        margin-bottom: 5px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #profile {
+        margin-top: 10px;
+    }
+
+
+    #profile,
+    #logout {
+        margin-left: 50%;
+        transform: translateX(-35%);
+        background-color: var(--main-color);
+        color: #fff;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+
+
+.register-container {
+    max-width: 900px;
+    margin: 17px auto;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+.illustration {
+    flex: 1;
+    background: #0a4556;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-section {
+    flex: 1;
+    padding: 40px;
+}
+
+.form-control {
+    font-size: 11px;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    color: #3d6b77;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #83b0c0;
+    color: rgb(14, 9, 9);
+}
+
+.btn:hover {
+    background-color: #6a96a7;
+    color: white;
+}
+
+
+@media (max-width:768px) {
+    .illustration {
+        flex: 0.7;
+        background: #0a4556;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    .register-container {
+        max-width: 900px;
+        margin: 17px 15px;
+        display: flex;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        padding: .375rem .75rem;
+        font-size: 0.7rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--bs-body-color);
+        background-color: var(--bs-body-bg);
+        background-clip: padding-box;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: var(--bs-border-radius);
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    .h2,
+    h2 {
+        font-size: calc(1.325rem + 0.01rem);
+    }
+
+    .mt-4 {
+        font-size: 0.8rem;
+        margin-top: 1.5rem !important;
+    }
+
+    .btn {
+        font-size: 10px;
+        background-color: #83b0c0;
+        color: rgb(14, 9, 9);
+    }
+}
+
+
+
+/* footer */
+
+
+.text-lg-start {
+    background-color: #45526e;
+    width: 117.5%;
+    margin-left: -115px;
+    position: relative;
+    bottom: -100px;
+}
+
+@media (max-width: 426px) {
+    .text-lg-start {
+        background-color: #45526e;
+        width: 97.5%;
+        margin-left: 4px;
+        position: relative;
+        bottom: -100px;
+    }
+}

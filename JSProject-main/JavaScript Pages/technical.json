@@ -1,0 +1,82 @@
+[
+  {
+    "title": "What does the alt attribute in the <img> tag specify?",
+    "answer_1": "The image source",
+    "answer_2": "Alternate text for the image",
+    "answer_3": "The image width",
+    "answer_4": "The image height",
+    "right_answer": "Alternate text for the image"
+  },
+  {
+    "title": "How do you create a responsive web design?",
+    "answer_1": "By using media queries and flexible grid layouts",
+    "answer_2": "By using fixed widths for elements",
+    "answer_3": "By using only CSS Grid",
+    "answer_4": "By avoiding images",
+    "right_answer": "By using media queries and flexible grid layouts"
+  },
+  {
+    "title":"What does the CSS z-index property control?",
+    "answer_1":"Opacity of an element",
+    "answer_2":"Visibility of an element",
+    "answer_3":"Position of an element along the z-axis",
+    "answer_4":"Alignment of text in an element",
+    "right_answer":"Position of an element along the z-axis"
+  },
+  {
+    "title": "What is the default value of the position property in CSS?",
+    "answer_1": "relative",
+    "answer_2": "absolute",
+    "answer_3": "static",
+    "answer_4": "fixed",
+    "right_answer": "static"
+  },
+  {
+    "title": "What does the acronym DOM stand for in web development?",
+    "answer_1": "Document Object Model",
+    "answer_2": "Dynamic Object Management",
+    "answer_3": "Data Object Model",
+    "answer_4": "Document Oriented Model",
+    "right_answer": "Document Object Model"
+  },
+  {
+    "title": "Which JavaScript method is used to write content into an HTML document?",
+    "answer_1": "document.log()",
+    "answer_2": "console.log()",
+    "answer_3": "window.alert()",
+    "answer_4": "document.write()",
+    "right_answer": "document.write()"
+  },
+  {
+    "title": "What is the purpose of the <meta> tag in HTML?",
+    "answer_1": "To define the title of a document",
+    "answer_2": "To provide metadata about the HTML document, such as character set and viewport settings",
+    "answer_3": "To create links to stylesheets",
+    "answer_4": "To insert images",
+    "right_answer": "To provide metadata about the HTML document, such as character set and viewport settingsB"
+  },
+  {
+    "title": "Which CSS property is used to change the text color of an element?",
+    "answer_1": "font-color",
+    "answer_2": "text-style",
+    "answer_3": "text-color",
+    "answer_4": "color",
+    "right_answer": "color"
+  },
+  {
+    "title": "Which method can be used to convert a JSON string into a JavaScript object?",
+    "answer_1": "JSON.parse()",
+    "answer_2": "JSON.stringify()",
+    "answer_3": "JSON.objectify()",
+    "answer_4": "JSON.convert()",
+    "right_answer": "JSON.parse()"
+  },
+  {
+    "title": " Which of the following attributes is used to provide a unique identifier for an HTML element?",
+    "Aanswer_1": "class",
+    "answer_2": "name",
+    "answer_3": "id",
+    "answer_4": "unique",
+    "right_answer": "id"
+  }
+]

@@ -1,0 +1,360 @@
+:root {
+    --main-color: #0a4556 ;
+    --second-color: #afc1c7;
+    --section-padding: 100px;
+    --para-color: #3d6b77;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+   
+
+}
+
+
+/* Start Header */
+
+ul {
+    list-style: none;
+
+} 
+
+ .navbar {
+    padding: 0px;
+}
+
+.container-fluid {
+     background-color: var(--main-color);
+}
+
+.navbar-brand {
+    margin-left: 7%;
+    margin-top: 5px;
+}
+
+
+@media (max-width: 426px) {
+    .navbar-brand img {
+        margin-left: -57px;
+
+    }
+}
+
+/* in mobile make it in center */
+    
+.navbar-collapse {
+     display: flex;
+     justify-content: flex-end ;
+     margin-right: 5%;
+    
+    
+}
+
+
+
+#navbarNav ul li {
+    transition: transform 0.2s ease-in;
+    font-weight: 600;
+}
+
+#navbarNav ul li:hover {
+    transform: scale(1.2);
+    
+}
+
+#navbarNav ul li a {
+    color: #fff;
+}
+
+
+#profile {
+    margin-left: 20px;
+}
+
+#profile,
+#logout {
+    background-color: --main-color;
+    color: var(--main-color);
+    padding: 5px 15px;
+    border-radius: 15%;
+    border: 1px solid #fff;
+    margin-top: -8px;
+    
+    
+}
+#profile:hover,
+#logout:hover {
+    color:#fff;
+    background-color: var(--main-color);
+}
+
+
+@media (max-width: 426px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: center ;
+       
+   }
+   .navbar-collapse ul li {
+    margin-bottom: 5px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+   }
+   #profile{
+    margin-top: 10px;
+   }
+
+
+   #profile,
+   #logout {
+    margin-left: 50%;
+    transform: translateX(-35%);
+    background-color: var(--main-color);
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+   }
+  
+}
+
+
+
+
+/* Slider */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 55px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slider-image.active {
+    opacity: 1;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlay .text {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .overlay .text {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* Added text shadow for better visibility */
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation for text */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* End Header */
+
+
+
+.head-component {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    text-align: center;
+
+}
+
+.head-component h2 {
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* the line that should we add the circle inside it  */
+.head-component h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: #333;
+    bottom: -30px;
+    width: 120px;
+
+}
+
+
+.head-component h2:after {
+    content: '';
+    position: absolute;
+    top: 143%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 50%;
+
+}
+
+.head-component p {
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+    line-height: 2;
+    color: var(--para-color);
+}
+
+
+/* Projects */
+
+.project-container {
+    margin-bottom: 100px;
+}
+
+.images-titles .shuffle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.images-titles .shuffle li:hover {
+    cursor: pointer;
+}
+
+.images-titles .shuffle .active {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.images-container {
+    margin-left: 20px; 
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+}
+
+.images-container .box {
+    position: relative;
+    /* to make the caption hidden */
+    overflow: hidden;
+
+
+}
+
+.images-container .box .caption {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+    transition: 0.3s;
+    /* make the caption out the screen, becase we make the box overflow hidden => when make the botton 0 it will appeare*/
+    bottom: -100%;
+}
+
+
+.images-container .box img {
+    /* to prevent the image to overflow the whole content */
+    max-width: 100%;
+    transition: 0.3s;
+}
+
+
+
+.images-container .box .caption p{
+    margin-top: 10px;
+    color: var(--main-color);
+}
+
+/* when make hover the caption will appear */
+
+.images-container .box:hover .caption {
+    bottom: 0%;
+}
+
+.images-container .box:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+
+
+/* large screen got 3 images*/
+@media (min-width: 1199px) {
+    .images-container .box {
+        flex-basis: 33.33333%;
+        
+    }
+
+}
+
+@media (max-width: 426px) {
+    .images-container .box {
+        margin-left: 10px;
+        
+    }
+
+}
+
+
+
+
+
+
+
+/* footer */
+
+
+.text-lg-start {
+    background-color: #45526e;
+    width: 117.5%;
+    margin-left: -115px;
+    position: relative;
+    bottom: -100px;
+}
+
+@media (max-width: 426px) {
+    .text-lg-start {
+        background-color: #45526e;
+        width: 97.5%;
+        margin-left: 4px;
+        position: relative;
+        bottom: -100px;
+    }
+}
+

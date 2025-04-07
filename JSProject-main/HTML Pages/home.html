@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="../CSS Pages/home.css" />
+    <!-- Bootstrap Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+  </head>
+  <body>
+      <!-- new header -->
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0px">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="..\Images\HomeImages\SolveoLogo2.png" alt="" width="170px"
+                    height="100px" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                style="color: hsl(0, 0%, 50%)">
+                <!-- <span class="navbar-toggler-icon" style="
+                background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg/'><path stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E'); " ></span> -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./home.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./aboutUs.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html"><button id="login">Login</button></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./registration.html"><button id="register">Register</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- End header -->
+
+
+  <!-- Start Slider Section -->
+
+  <div class="slider-container">
+    <div class="overlay">
+      <div class="slider-image active" style="background-image: url('../Images/HomeImages/IT-Company.jpg')">
+        <div class="overlay">
+          <p class="text">
+            Towards a smarter future with advanced software solutions for web
+            application development
+          </p>
+        </div>
+      </div>
+      <div class="slider-image" style="
+            background-image: url('../Images//HomeImages/pexels-pixabay-269077.jpg');
+          ">
+        <div class="overlay">
+          <p class="text">
+            Innovative designs that provide an unforgettable user experience
+          </p>
+        </div>
+      </div>
+      <div class="slider-image" style="
+            background-image: url('../Images/HomeImages/premium_photo-1682141007707-1f09c5a1d814.jpg');
+          ">
+        <div class="overlay">
+          <p class="text">Your tech vision starts here, with us</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Slider Section -->
+
+  <!-- project -->
+  <div class="project-container" id="pro">
+    <div class="head-component">
+      <h2>Projects</h2>
+      <p>
+        Explore our innovative approach to solving complex problems with
+        cutting-edge technology.
+      </p>
+    </div>
+    <div class="images-titles">
+      <ul class="shuffle">
+        <li class="active" data-category="all">All</li>
+        <li data-category="web">Websites</li>
+        <li data-category="app">Apps</li>
+      </ul>
+    </div>
+    <div class="images-container">
+      <div class="box" data-category="web">
+        <img src="../Images/HomeImages/pro1.jpng.gif" alt="" width="400px" height="250px" />
+        <div class="caption">
+          <h4>Front-End Monitor</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+      <div class="box" data-category="web">
+        <img src="../Images/HomeImages/pro2.png" alt="" width="400px" height="250px" />
+        <div class="caption">
+          <h4>Website Films</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+      <div class="box" data-category="web">
+        <img src="../Images/HomeImages/pro3.jpg" alt="" width="400px" height="250px" />
+        <div class="caption">
+          <h4>Architect Website</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+      <div class="box" data-category="app">
+        <img src="../Images/HomeImages/pro4.png" alt="" width="400px" height="250px" />
+        <div class="caption">
+          <h4>Facebook App</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+      <div class="box" data-category="app">
+        <img src="../Images/HomeImages/pro5.png" alt="" width="400px" height="250px" />
+        <div class="caption">
+          <h4>Shaihd App</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+      <div class="box" data-category="app">
+        <img src="../Images/HomeImages/pro6.png" alt="" width="400px" height="250px" />
+        <div class="caption">
+          <h4>Medium App</h4>
+          <p>Photography</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+     <!-- Footer -->
+
+     <div class="container my-5">
+      <!-- Footer Bootstrap-->
+      <footer
+        class="text-center text-lg-start text-white" 
+       
+      >
+        <!-- Grid container -->
+        <div class="container p-4 pb-0" style="margin-top: 100px">
+          <!-- Section: Links -->
+          <section class="">
+            <!--Grid row-->
+            <div class="row">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">
+                  <img
+                    src="../Images/HomeImages/logo.png"
+                    alt=""
+                    width="200px"
+                    height="100px"
+                  />
+                </h6>
+                <p style="margin-top: -20px">
+                  "Let us help you build and maintain your digital presence with
+                  cutting-edge solutions tailored to your business needs."
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                <p>
+                  <a class="text-white">Websites</a>
+                </p>
+                <p>
+                  <a class="text-white">Apps</a>
+                </p>
+                <p>
+                  <a class="text-white">Maintenance</a>
+                </p>
+                <p>
+                  <a class="text-white">About</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <!-- Grid column -->
+              <hr class="w-100 clearfix d-md-none" />
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                <p><i class="fas fa-home mr-3"></i> Irbid, NY 10012, JO</p>
+                <p><i class="fas fa-envelope mr-3"></i> Solveo@gmail.com</p>
+                <p><i class="fas fa-phone mr-3"></i> + 962 77</p>
+                <p><i class="fas fa-phone mr-3"></i> + 962 77</p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+                <!-- Facebook -->
+                <a
+                  class="btn btn-primary btn-floating m-1"
+                  style="background-color: #3b5998"
+                  href="#!"
+                  role="button"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+
+                <!-- Twitter -->
+                <a
+                  class="btn btn-primary btn-floating m-1"
+                  style="background-color: #55acee"
+                  href="#!"
+                  role="button"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+
+                <!-- Google -->
+                <a
+                  class="btn btn-primary btn-floating m-1"
+                  style="background-color: #dd4b39"
+                  href="#!"
+                  role="button"
+                  ><i class="fab fa-google"></i
+                ></a>
+
+                <!-- Instagram -->
+                <a
+                  class="btn btn-primary btn-floating m-1"
+                  style="background-color: #ac2bac"
+                  href="#!"
+                  role="button"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+
+                <!-- Linkedin -->
+                <a
+                  class="btn btn-primary btn-floating m-1"
+                  style="background-color: #0082ca"
+                  href="#!"
+                  role="button"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <!-- Github -->
+                <a
+                  class="btn btn-primary btn-floating m-1"
+                  style="background-color: #333333"
+                  href="#!"
+                  role="button"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <!--Grid row-->
+          </section>
+          <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          &copy;2025 Copyright:
+          <a
+            class="text-white"
+            href="./we.html"
+            style="text-decoration: none"
+            ><span style="color: #0082ca">Solveo</span> . All rights reserved</a
+          >
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </div>
+    <!-- End Footer -->
+
+
+    <script src="../JavaScript Pages/home.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

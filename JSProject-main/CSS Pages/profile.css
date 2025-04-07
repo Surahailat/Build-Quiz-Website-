@@ -1,0 +1,437 @@
+:root {
+    --main-color: #0a4556;
+    --transparent-color: rgb(15 116 143 / 70%);
+    --section-padding: 100px;
+    --para-color: #3d6b77;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+   
+
+}
+
+/* Start Header */
+
+ul {
+    list-style: none;
+
+} 
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar stays above the profile */
+}
+
+
+ .navbar {
+    padding: 0px;
+}
+
+.container-fluid {
+     background-color: var(--main-color);
+
+}
+
+.navbar-brand {
+    margin-left: 7%;
+    margin-top: 5px;
+}
+
+
+@media (max-width: 426px) {
+    .navbar-brand img {
+        margin-left: -57px;
+
+    }
+}
+
+/* in mobile make it in center */
+    
+.navbar-collapse {
+     display: flex;
+     justify-content: flex-end ;
+     margin-right: 5%;
+    
+    
+}
+
+
+
+#navbarNav ul li {
+    transition: transform 0.2s ease-in;
+    font-weight: 600;
+}
+
+#navbarNav ul li:hover {
+    transform: scale(1.2);
+    
+}
+
+#navbarNav ul li a {
+    color: #fff;
+}
+
+
+#profile {
+    margin-left: 20px;
+}
+
+#profile,
+#logout {
+    background-color: --main-color;
+    color: var(--main-color);
+    padding: 5px 15px;
+    border-radius: 15%;
+    border: 1px solid #fff;
+    margin-top: -8px;
+    
+    
+}
+#profile:hover,
+#logout:hover {
+    color:#fff;
+    background-color: var(--main-color);
+}
+
+
+@media (max-width: 426px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: center ;
+       
+   }
+   .navbar-collapse ul li {
+    margin-bottom: 5px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+   }
+   #profile{
+    margin-top: 10px;
+   }
+
+
+   #profile,
+   #logout {
+    margin-left: 50%;
+    transform: translateX(-35%);
+    background-color: var(--main-color);
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+   }
+  
+}
+
+
+
+
+
+
+
+
+.profile {
+    display: flex;
+    /* justify-content: baseline; */
+    border-radius: 15px;
+    margin: 4%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #F9FEFA;
+    /* height: 500px; */
+    margin-top: 200px; /* Add enough space to clear the navbar */
+    position: relative;  /* Add relative positioning */
+
+
+}
+
+
+
+.img {
+    height: 90px;
+    width: 95%;
+    margin-top: 25%;
+    border: 3px solid #2C383C;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.div1 {
+    width: 20%;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+
+    
+
+
+}
+
+.div2 {
+
+    width: 60%;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.profile-info {
+    margin-top: 9%;
+    color: #F9FEFA;
+}
+
+.input {
+    width: 140%;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #2C383C;
+    border-radius: 5px;
+    padding: 5px 10px 10px;
+}
+
+.flname {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7%;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+}
+
+.flname div,
+.info div {
+    width: 30%;
+}
+
+.label {
+    font-weight: bold;
+
+}
+
+.botton {
+    position: relative;
+    top: -73%;
+    right: -114%;
+    color: white;
+    background-color: #0A4556;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 11%;
+    padding-top: 10px;
+
+}
+.botton:hover {
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+
+}
+
+.error-message {
+    color: red;
+}
+
+.form {
+    margin: 0 40px 40px 40px;
+    text-align: left;
+}
+.changepass{
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #2C383C;
+    border-radius: 5px;
+    width: 42%;
+    padding: 5px 10px 10px;
+
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        height: auto;
+        margin: 10px;
+    }
+
+    .div1 {
+        width: 90%;
+        padding: 20px;
+        background-color: #3D6B77;
+    }
+
+    .div2 {
+        width: 100%;
+    }
+
+    .img {
+        height: 100px;
+        width: 100px;
+        margin-top: 10px;
+    }
+
+    .profile-info {
+        margin-top: 10px;
+        color: #FFFFFF;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .flname,
+    .info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .flname div,
+    .info div {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .botton {
+        position: static;
+        margin-top: 20px;
+        width: 20%;
+        right: -76%;
+        text-align: center;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        padding-top: 13px;
+    }
+
+    .hr {
+        display: none;
+    }
+
+    .form {
+        margin: 0 40px 40px 0;
+    }
+    .changepass{
+        width: 100%;
+    }
+}
+
+
+
+/* footer */
+
+
+.text-lg-start {
+    background-color: #45526e;
+    width: 117.5%;
+    margin-left: -115px;
+    position: relative;
+    bottom: -100px;
+}
+
+@media (max-width: 426px) {
+    .text-lg-start {
+        background-color: #45526e;
+        width: 97.5%;
+        margin-left: 4px;
+        position: relative;
+        bottom: -100px;
+    }
+}
+
+
+/* popup massage */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40% !important;
+}
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+#resetPasswordButton {
+    background-color: #0A4556;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    transition: transform 0.2s;
+}
+
+#resetPasswordButton:hover {
+    transform: scale(1.1);
+}
+
+.current,
+.new,
+.confirmNew {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#savePasswordButton {
+    width: 30%;
+    padding: 7px;
+    background-color: #0A4556;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+
+
+}
+
+#savePasswordButton:hover {
+    background-color: #fff;
+    color: #0A4556;
+    border: 2px solid #0A4556;
+}
+
+#closeModal {
+    
+    text-align: right;
+
+}

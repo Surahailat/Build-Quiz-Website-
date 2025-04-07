@@ -1,0 +1,399 @@
+:root {
+    --main-color: #0a4556;
+    --second-color: #afc1c7;
+    --section-padding: 100px;
+    --para-color: #3d6b77;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Start Header */
+
+ul {
+    list-style: none;
+
+} 
+
+ .navbar {
+    padding: 0px;
+}
+
+.container-fluid {
+     background-color: var(--main-color);
+}
+
+.navbar-brand {
+    margin-left: 7%;
+    margin-top: 5px;
+}
+
+
+@media (max-width: 426px) {
+    .navbar-brand img {
+        margin-left: -57px;
+
+    }
+}
+
+/* in mobile make it in center */
+    
+.navbar-collapse {
+     display: flex;
+     justify-content: flex-end ;
+     margin-right: 5%;
+    
+    
+}
+
+
+
+#navbarNav ul li {
+    transition: transform 0.2s ease-in;
+    font-weight: 600;
+}
+
+#navbarNav ul li:hover {
+    transform: scale(1.2);
+    
+}
+
+#navbarNav ul li a {
+    color: #fff;
+}
+
+
+#profile {
+    margin-left: 20px;
+}
+
+#profile,
+#logout {
+    background-color: --main-color;
+    color: var(--main-color);
+    padding: 5px 15px;
+    border-radius: 15%;
+    border: 1px solid #fff;
+    margin-top: -8px;
+    
+    
+}
+#profile:hover,
+#logout:hover {
+    color:#fff;
+    background-color: var(--main-color);
+}
+
+
+@media (max-width: 426px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: center ;
+       
+   }
+   .navbar-collapse ul li {
+    margin-bottom: 5px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+   }
+   #profile{
+    margin-top: 10px;
+   }
+
+
+   #profile,
+   #logout {
+    margin-left: 50%;
+    transform: translateX(-35%);
+    background-color: var(--main-color);
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+   }
+  
+}
+
+
+
+
+/*  img cover for about us  */
+.cover img {
+    width: 100%;
+    height: 450px;
+    margin-top: 100px;
+}
+
+
+.head-component {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    text-align: center;
+
+}
+
+.head-component h2 {
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* the line that should we add the circle inside it  */
+.head-component h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: #333;
+    bottom: -30px;
+    width: 120px;
+
+}
+
+
+.head-component h2:after {
+    content: '';
+    position: absolute;
+    top: 143%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 50%;
+
+}
+
+.head-component p {
+    width: 550px;
+    margin: 0 auto;
+    max-width: 100%;
+    line-height: 2;
+    color: var(--para-color);
+}
+
+
+.whyChooseUs {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    text-align: center;
+}
+
+.whyChooseUs h2 {
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.whyChooseUs h2:after {
+    content: '';
+    position: absolute;
+    top: 143%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 50%;
+
+}
+
+.whyChooseUs h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: #333;
+    bottom: -30px;
+    width: 307px;
+
+}
+
+
+
+.whyChooseUs p {
+    width: 550px;
+    margin: 0 auto 28px;
+    max-width: 100%;
+    line-height: 2;
+    color: var(--para-color);
+}
+
+
+.row {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px
+}
+
+.row .item {
+
+    width: 38%;
+    background-color: var(--main-color);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+    transition: all 1s;
+    text-align: center;
+
+}
+
+.row .item #p {
+    padding: 23px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: white;
+}
+
+#p2 {
+    margin-top: 55px;
+
+}
+
+
+
+@media (max-width:426px) {
+    .row .item {
+
+        height: 342px;
+
+    }
+
+    .whyChooseUs h2:after {
+        top: 122%;
+        ;
+        width: 15px;
+
+
+    }
+
+    .whyChooseUs h2::before {
+        width: 188px;
+
+    }
+}
+
+.card {
+    position: relative;
+    width: 400px; 
+    height: 300px; 
+    overflow: hidden;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:  #83b0c0bb; 
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+    color: white;
+    margin-top: 60px;
+    padding: 20px 50px;
+    height: 100px;
+    width: 90%; 
+    margin: 60px;
+}
+
+.banner .banner-text {
+    font-size: 20px;
+}
+
+
+.banner .banner-button button {
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--second-color);
+    transition: ease-in-out;
+    font-weight: bold;
+    color: white;
+}
+
+.banner .banner-button button:hover {
+
+    background-color: white;
+    color: #0a4556;
+}
+
+@media (max-width:426px) {
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--main-color);
+        color: white;
+        margin-top: 60px;
+        padding: 20px 50px;
+        height: 200px;
+        width: 90%;
+        margin: 60px;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+
+   /* footer */
+
+
+.text-lg-start {
+    background-color: #45526e;
+    width: 117.5%;
+    margin-left: -115px;
+    position: relative;
+    bottom: -100px;
+}
+
+@media (max-width: 426px) {
+    .text-lg-start {
+        background-color: #45526e;
+        width: 97.5%;
+        margin-left: 4px;
+        position: relative;
+        bottom: -100px;
+    }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Results</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      p.info {
+        text-align: center;
+        color: #555;
+        font-size: 16px;
+      }
+      table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #0a4556;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #ddd;
+      }
+      .correct-answer {
+        color: green;
+        font-weight: bold;
+      }
+      .chosen-answer {
+        font-weight: bold;
+      }
+      .back-button,
+      .btn-primary {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #0a4556;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .back-button:hover,
+      .btn-primary:hover {
+        background-color: #005bb5;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pdf">
+      <h1>Quiz Results</h1>
+      <h2 class="info" id="aaaa" style="text-align: center"></h2>
+      <div id="table-container"></div>
+    </div>
+      <button class="back-button" onclick="window.location.href='../HTML Pages/applyTest.html'">
+        Back to Home
+      </button>
+      <div>
+        <button class="btn1 btn-primary" id="download">Download PDF</button>
+      </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tableContainer = document.getElementById("table-container");
+
+        // جلب البيانات من LocalStorage الخاصة بـ userAnswers2
+        const userAnswers2 =
+          JSON.parse(localStorage.getItem("userAnswers2")) || [];
+
+        if (userAnswers2.length === 0) {
+          tableContainer.innerHTML = "<p>No results available to display.</p>";
+          return;
+        }
+
+        // إنشاء الجدول
+        const table = document.createElement("table");
+
+        // إنشاء الصف الرئيسي للرؤوس
+        const headerRow = document.createElement("tr");
+        const headers = ["Question", "Chosen Answer", "Correct Answer"];
+        headers.forEach((headerText) => {
+          const th = document.createElement("th");
+          th.textContent = headerText;
+          headerRow.appendChild(th);
+        });
+        table.appendChild(headerRow);
+        let correctAnswersCount = 0;
+        // إضافة البيانات إلى الجدول
+        userAnswers2.forEach((answer) => {
+          const row = document.createElement("tr");
+
+          const questionCell = document.createElement("td");
+          questionCell.textContent = answer.question;
+
+          const chosenCell = document.createElement("td");
+          chosenCell.textContent = answer.chosenAnswer;
+          chosenCell.classList.add("chosen-answer");
+
+          const correctCell = document.createElement("td");
+          correctCell.textContent = answer.correctAnswer;
+          correctCell.classList.add("correct-answer");
+
+          // إذا كانت الإجابة المختارة صحيحة، قم بتلوينها باللون الأخضر
+          if (answer.chosenAnswer === answer.correctAnswer) {
+            chosenCell.style.color = "green";
+            correctAnswersCount++;
+          } else {
+            chosenCell.style.color = "red";
+          }
+
+          row.appendChild(questionCell);
+          row.appendChild(chosenCell);
+          row.appendChild(correctCell);
+
+          table.appendChild(row);
+        });
+        let aaaa = document.getElementById("aaaa");
+        // إضافة الجدول إلى الصفحة
+        tableContainer.appendChild(table);
+        const resultSummary = document.createElement("p");
+        resultSummary.classList.add("result-summary");
+        aaaa.textContent = `You answered ${correctAnswersCount} out of ${userAnswers2.length} questions correctly.`;
+        tableContainer.appendChild(resultSummary);
+      });
+    // download
+      window.onload = function () {
+      document.getElementById("download").addEventListener("click", () => {
+        const pdf = document.getElementById("pdf");
+        if (pdf.innerHTML.trim() !== "") {
+          const opt = {
+            margin: -.5,
+            filename: 'quiz_results.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+          };
+          html2pdf().from(pdf).set(opt).save();
+        }
+      });
+    };
+
+    </script>
+  </body>
+</html>

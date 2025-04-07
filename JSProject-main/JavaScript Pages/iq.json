@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Which number should be there next in this series? 25, 24, 22, 19, 15, ___",
+    "answer_1": "30",
+    "answer_2": "5",
+    "answer_3": "14",
+    "answer_4": "10",
+    "right_answer": "10"
+  },
+  {
+    "title": "Nia, twelve years old, is three times as old as her sister. How old will Nia be when she is twice as old as her sister?",
+    "answer_1": "16",
+    "answer_2": "18",
+    "answer_3": "20",
+    "answer_4": "15",
+    "right_answer": "16"
+  },
+  {
+    "title": "Which word is the odd one out?",
+    "answer_1": "Dog",
+    "answer_2": "Car",
+    "answer_3": "Fish",
+    "answer_4": "Cat",
+    "right_answer": "Car"
+  },
+  {
+    "title": "What is the missing number: 4, 9, 16, 25, ___?",
+    "answer_1": "28",
+    "answer_2": "24",
+    "answer_3": "36",
+    "answer_4": "30",
+    "right_answer": "36"
+  },
+  {
+    "title": "Which is next: triangle, square, pentagon, ______.",
+    "answer_1": "Septagon",
+    "answer_2": "Trapezoid",
+    "answer_3": "Octagon",
+    "answer_4": "Hexagon",
+    "right_answer": "Hexagon"
+  },
+  {
+    "title": "Nine dogs can dig nine holes in nine minutes. How long would it take 36 dogs to dig 36 holes?",
+    "answer_1": "1 minute",
+    "answer_2": "9 minutes",
+    "answer_3": "36 minutes",
+    "answer_4": "27 minutes",
+    "right_answer": "9 minutes"
+  },
+  {
+    "title": "Six bananas are sitting in a bunch on the counter. You take four of them. How many do you have?",
+    "answer_1": "6",
+    "answer_2": "8",
+    "answer_3": "4",
+    "answer_4": "2",
+    "right_answer": "4"
+  },
+  {
+    "title": "A, B, D, G, K. Which letter comes next in the sequence?",
+    "answer_1": "Q",
+    "answer_2": "O",
+    "answer_3": "N",
+    "answer_4": "P",
+    "right_answer": "P"
+  },
+  {
+    "title": "If a train travels at a speed of 60 miles per hour, how far will it travel in 2.5 hours?",
+    "answer_1": "120 Miles",
+    "answer_2": "150 Miles",
+    "answer_3": "180 Miles",
+    "answer_4": "200 Miles",
+    "right_answer": "150 Miles"
+  },
+  {
+    "title": "How many months have 28 days?",
+    "answer_1": "12",
+    "answer_2": "1",
+    "answer_3": "2",
+    "answer_4": "0",
+    "right_answer": "12"
+  }
+]

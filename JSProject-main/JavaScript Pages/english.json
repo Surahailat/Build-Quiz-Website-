@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Complete the sentence:I ___ to the store yesterday.",
+    "answer_1": "Go",
+    "answer_2": "Went",
+    "answer_3": "Gone",
+    "answer_4": "Going",
+    "right_answer": "Went"
+  },
+  {
+    "title": "What is the plural form of child ",
+    "answer_1": "Childes",
+    "answer_2": "Childs",
+    "answer_3": "Children",
+    "answer_4": "Childrens",
+    "right_answer": "Childrens"
+  },
+  {
+    "title": "Complete the sentence:The cat ___ on the mat.",
+    "answer_1": "Sitting",
+    "answer_2": "Sits",
+    "answer_3": "Sit",
+    "answer_4": "Is sitting",
+    "right_answer": "Is sitting"
+  },
+  {
+    "title": "Which word is an adjective?",
+    "answer_1": "Jump",
+    "answer_2": "Eat",
+    "answer_3": "Happy",
+    "answer_4": "Run",
+    "right_answer": "Happy"
+  },
+  {
+    "title": "What does the idiom break the ice mean?",
+    "answer_1": "To initiate conversation in a social setting",
+    "answer_2": "To end a relationship",
+    "answer_3": "To cause a problem",
+    "answer_4": "To break something physically",
+    "right_answer": "To initiate conversation in a social setting"
+  },
+  {
+    "title": "Which sentence is grammatically correct?",
+    "answer_1": "He not like to swim.",
+    "answer_2": "He doesn't like to swim.",
+    "answer_3": "He don't like to swim.",
+    "answer_4": "He doesn't likes to swim.",
+    "right_answer": "He doesn't like to swim."
+  },
+  {
+    "title": "Which word is an antonym for difficult?",
+    "answer_1": "Challenging",
+    "answer_2": "Complicated",
+    "answer_3": "Hard",
+    "answer_4": "Easy",
+    "right_answer": "Easy"
+  },
+  {
+    "title": "Which of the following is a compound sentence?",
+    "answer_1": "Because I like coffee, I drink it every day.",
+    "answer_2": "Although I like coffee, I drink tea.",
+    "answer_3": "I like coffee, and she likes tea.",
+    "answer_4": "I like coffee.",
+    "right_answer": "I like coffee, and she likes tea."
+  },
+  {
+    "title": "Read the sentence: The scientist conducted an experiment to validate her hypothesis. What does validate mean in this context?",
+    "answer_1": "To prove or confirm",
+    "answer_2": "To question",
+    "answer_3": "To create",
+    "answer_4": "To ignore",
+    "right_answer": "To prove or confirm"
+  },
+  {
+    "title": " Which sentence is grammatically correct?",
+    "answer_1": "Everyone having their own opinion.",
+    "answer_2": "Everyone is having their own opinion.",
+    "answer_3": "Everyone have their own opinion.",
+    "answer_4": "Everyone has their own opinion.",
+    "right_answer": "Everyone has their own opinion."
+  }
+]

@@ -1,0 +1,271 @@
+:root {
+    --main-color: #0a4556 ;
+    --second-color: #afc1c7;
+    --section-padding: 100px;
+    --para-color: #3d6b77;
+    align-items: stretch;
+    margin: -9px
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Start Header */
+
+ul {
+    list-style: none;
+
+}
+
+.navbar {
+    padding: 0px;
+
+}
+
+.container-fluid {
+    background-color: var(--main-color);
+}
+
+.navbar-brand {
+    margin-left: 7%;
+    margin-top: 5px;
+}
+
+/* in mobile make it in center */
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+
+
+}
+
+
+
+#navbarNav ul li {
+    transition: transform 0.2s ease-in;
+    font-weight: 600;
+}
+
+#navbarNav ul li:hover {
+    transform: scale(1.2);
+
+}
+
+#navbarNav ul li a {
+    color: #fff;
+}
+
+
+#login {
+    margin-left: 20px;
+}
+
+#register,
+#login {
+    background-color: --main-color;
+    color: var(--main-color);
+    padding: 5px;
+    border-radius: 15%;
+    border: 1px solid #fff;
+    margin-top: -8px;
+
+
+}
+#register:hover,
+#login:hover {
+    color:#fff;
+    background-color: var(--main-color);
+}
+
+@media (max-width: 426px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .navbar-collapse ul li {
+        margin-bottom: 5px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #profile {
+        margin-top: 10px;
+    }
+
+
+    #profile,
+    #logout {
+        margin-left: 50%;
+        transform: translateX(-35%);
+        background-color: var(--main-color);
+        color: #fff;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+
+header {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.container-contact {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 80%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 70px;
+}
+
+.contact-info {
+    width: 40%;
+    background: #0A4556;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-form {
+    width: 60%;
+    padding: 30px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #83b0c0;;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    color: black;
+    background: linear-gradient(45deg,#83b0c0 ,#0A4556);
+}
+
+.map-button {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #0A4556, #83b0c0);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.map-button:hover {
+    color: black;
+    background: linear-gradient(45deg,#83b0c0 ,#0A4556 );
+}
+
+
+/* responsive.css */
+
+@media screen and (max-width: 426px) {
+    .navbar-brand img {
+        width: 173px;
+        height:74px;
+    }
+    
+   .container-contact{
+    display: flex;
+    flex-direction: column;
+   } 
+   .contact-info {
+    width: 100%;}
+    
+    .contact-form {
+        width: 102%;
+        padding: 47px;
+    }
+}
+
+
+
+/* footer */
+
+
+.text-lg-start {
+    background-color: #45526e;
+    width: 117.5%;
+    margin-left: -115px;
+    position: relative;
+    bottom: -100px;
+}
+
+@media (max-width: 426px) {
+    .text-lg-start {
+        background-color: #45526e;
+        width: 97.5%;
+        margin-left: 4px;
+        position: relative;
+        bottom: -100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+

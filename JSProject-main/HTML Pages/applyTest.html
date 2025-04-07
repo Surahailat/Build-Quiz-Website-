@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solveo</title>
+    <link rel="stylesheet" href="../CSS Pages/applyTest.css" />
+    <!-- Bootstrap Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      .popup-content{
+      height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- new header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0px ; position: fixed; width: 100%; z-index: 1000;">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../Images/HomeImages/logo.png" alt="" width="170px"
+                  height="90px" style=" margin-left: -57px;" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+              style="color: hsl(0, 0%, 50%); margin-right: 16px; ">
+              <span class="navbar-toggler-icon" style="
+      background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox=\'0 0 30 30\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath stroke=\'white\' stroke-width=\'2\' d=\'M4 7h22M4 15h22M4 23h22\'/%3E%3C/svg%3E');
+    "></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="./homeP.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./homeP.html">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./applyTest.html">Test</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./aboutUsP.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./contactP.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                      <!-- <a class="nav-link" href="register.html"><button id="register"><img src="../Images/HomeImages/user_17827179 1.png" alt=""></button></a> -->
+                      <a class="nav-link" href="./profile.html"><button id="profile"><i
+                                  class="fa-regular fa-user"></i></button></a>
+                  </li>
+                  <li class="nav-item">
+                      <!-- <a class="nav-link" href="login.html"><button id="login"><img src="../Images/HomeImages/logout_16585255 1.png" alt=""></button></a> -->
+                      <a class="nav-link" href="login.html"><button id="logout">
+                              <i class="fa-solid fa-right-from-bracket"></i></button></a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+
+    <!-- End header -->
+
+    <div class="head-component">
+      <h1>Select Your Test</h1>
+      <p>
+        Pick a quiz to test your knowledge in IQ, IT, or English. Challenge
+        yourself and get your results instantly!
+      </p>
+    </div>
+
+    <div class="cards-container">
+      <div class="card">
+        <h3>IQ Test</h3>
+        <img
+          src="../Images/ApplyTest/IQ test.jpg"
+          alt=""
+          width="100%"
+          height="200px"
+        />
+        <p>
+          Challenge your problem-solving and reasoning abilities with our IQ
+          test.
+        </p>
+        <a href="../HTML Pages/resultiq.html"><div class="resultIQ"></div></a>
+
+        <button class="applyTestButtonIQ">Apply Test</button>
+      </div>
+      <div class="card">
+        <h3>IT Knowledge Test</h3>
+        <img class="it-Image" src="..//Images/ApplyTest/ITest.png" alt="" style="width: 100%;" />
+        <p class="tech-p">
+          Test your technical knowledge in programming, databases, and more.
+        </p>
+        <a href="../HTML Pages/resultit.html"><div class="resultIT"></div></a>
+
+        <button class="applyTestButtonIT it-btn">Apply Test</button>
+      </div>
+      <div class="card">
+        <h3>English Proficiency Test</h3>
+        <img
+          src="../Images/ApplyTest/English-levels.png"
+          alt=""
+          width="100%"
+          height="200px"
+        />
+        <p>Measure your grammar, vocabulary, and comprehension skills.</p>
+        <a href="../HTML Pages/resulten.html"><div class="resultEN"></div></a>
+
+
+        <button class="applyTestButtonEN">Apply Test</button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Pop-up IQ Modal -->
+    <div id="testInstructionsIQ" class="popup-overlay">
+      <div class="popup-content" >
+        <h2>IQ Test Instructions</h2>
+        <ul>
+          <li>
+            <strong>Number of Questions:</strong> The IQ Test consists of
+            <strong>10 questions</strong>.
+          </li>
+          <li>
+            <strong>Time Limit:</strong> You have
+            <strong>2 minutes (120 seconds)</strong> to complete the entire
+            test.
+          </li>
+          <li>
+            <strong>One-Way Navigation:</strong>
+            <ul class="inside">
+              <li>
+                You can <strong>only move forward</strong> through the
+                questions.
+              </li>
+              <li>
+                <strong>Going back</strong> to previous questions is not allowed
+                once you proceed.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>No Page Refresh:</strong> Refreshing or closing the page
+            during the test will <strong>reset your progress</strong>, and you
+            will need to start over.
+          </li>
+          <li>
+            <strong>Automatic Submission:</strong> The test will be
+            <strong>automatically submitted</strong> when time expires.
+          </li>
+          <li>
+            <strong>Answer Carefully:</strong> Read each question thoroughly
+            before selecting an answer.
+          </li>
+          <li>
+            <strong>Focus:</strong> Avoid distractions to make the best use of
+            your time.
+          </li>
+        </ul>
+
+        <div class="btns">
+          <a href="./quiz_page.html"> <button id="closePopupButtonGO22">Go TO Exam</button> </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pop-up IT Modal -->
+    <div id="testInstructionsIT" class="popup-overlay">
+      <div class="popup-content">
+        <h2>IT Test Instructions</h2>
+        <ul>
+          <li>
+            <strong>Number of Questions:</strong> The IQ Test consists of
+            <strong>10 questions</strong>.
+          </li>
+          <li>
+            <strong>Time Limit:</strong> You have
+            <strong>2 minutes (120 seconds)</strong> to complete the entire
+            test.
+          </li>
+          <li>
+            <strong>One-Way Navigation:</strong>
+            <ul class="inside">
+              <li>
+                You can <strong>only move forward</strong> through the
+                questions.
+              </li>
+              <li>
+                <strong>Going back</strong> to previous questions is not allowed
+                once you proceed.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>No Page Refresh:</strong> Refreshing or closing the page
+            during the test will <strong>reset your progress</strong>, and you
+            will need to start over.
+          </li>
+          <li>
+            <strong>Automatic Submission:</strong> The test will be
+            <strong>automatically submitted</strong> when time expires.
+          </li>
+          <li>
+            <strong>Answer Carefully:</strong> Read each question thoroughly
+            before selecting an answer.
+          </li>
+          <li>
+            <strong>Focus:</strong> Avoid distractions to make the best use of
+            your time.
+          </li>
+        </ul>
+
+        <div class="btns">
+          <a href="./quiz_page.html"> <button id="closePopupButtonGO11">Go TO Exam</button> </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Pop-up IT Modal -->
+    <div id="testInstructionsEN" class="popup-overlay">
+      <div class="popup-content">
+        <h2>Englsih Test Instructions</h2>
+        <ul>
+          <li>
+            <strong>Number of Questions:</strong> The IQ Test consists of
+            <strong>10 questions</strong>.
+          </li>
+          <li>
+            <strong>Time Limit:</strong> You have
+            <strong>2 minutes (120 seconds)</strong> to complete the entire
+            test.
+          </li>
+          <li>
+            <strong>One-Way Navigation:</strong>
+            <ul class="inside">
+              <li>
+                You can <strong>only move forward</strong> through the
+                questions.
+              </li>
+              <li>
+                <strong>Going back</strong> to previous questions is not allowed
+                once you proceed.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>No Page Refresh:</strong> Refreshing or closing the page
+            during the test will <strong>reset your progress</strong>, and you
+            will need to start over.
+          </li>
+          <li>
+            <strong>Automatic Submission:</strong> The test will be
+            <strong>automatically submitted</strong> when time expires.
+          </li>
+          <li>
+            <strong>Answer Carefully:</strong> Read each question thoroughly
+            before selecting an answer.
+          </li>
+          <li>
+            <strong>Focus:</strong> Avoid distractions to make the best use of
+            your time.
+          </li>
+        </ul>
+
+        <div class="btns">
+          <a href="./quiz_page.html"> <button id="closePopupButtonGO">Go TO Exam </button> </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+      <!-- Footer -->
+
+      <div class="container my-5">
+        <!-- Footer Bootstrap-->
+        <footer
+          class="text-center text-lg-start text-white" 
+         
+        >
+          <!-- Grid container -->
+          <div class="container p-4 pb-0" style="margin-top: 100px">
+            <!-- Section: Links -->
+            <section class="">
+              <!--Grid row-->
+              <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">
+                    <img
+                      src="../Images/HomeImages/logo.png"
+                      alt=""
+                      width="200px"
+                      height="100px"
+                    />
+                  </h6>
+                  <p style="margin-top: -20px">
+                    "Let us help you build and maintain your digital presence with
+                    cutting-edge solutions tailored to your business needs."
+                  </p>
+                </div>
+                <!-- Grid column -->
+  
+                <hr class="w-100 clearfix d-md-none" />
+  
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                  <p>
+                    <a class="text-white">Websites</a>
+                  </p>
+                  <p>
+                    <a class="text-white">Apps</a>
+                  </p>
+                  <p>
+                    <a class="text-white">Maintenance</a>
+                  </p>
+                  <p>
+                    <a class="text-white">About</a>
+                  </p>
+                </div>
+                <!-- Grid column -->
+  
+                <hr class="w-100 clearfix d-md-none" />
+  
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none" />
+  
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                  <p><i class="fas fa-home mr-3"></i> Irbid, NY 10012, JO</p>
+                  <p><i class="fas fa-envelope mr-3"></i> Solveo@gmail.com</p>
+                  <p><i class="fas fa-phone mr-3"></i> + 962 77</p>
+                  <p><i class="fas fa-phone mr-3"></i> + 962 77</p>
+                </div>
+                <!-- Grid column -->
+  
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+  
+                  <!-- Facebook -->
+                  <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #3b5998"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+  
+                  <!-- Twitter -->
+                  <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #55acee"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+  
+                  <!-- Google -->
+                  <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #dd4b39"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-google"></i
+                  ></a>
+  
+                  <!-- Instagram -->
+                  <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #ac2bac"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+  
+                  <!-- Linkedin -->
+                  <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #0082ca"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                  <!-- Github -->
+                  <a
+                    class="btn btn-primary btn-floating m-1"
+                    style="background-color: #333333"
+                    href="#!"
+                    role="button"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </div>
+              </div>
+              <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+          </div>
+          <!-- Grid container -->
+  
+          <!-- Copyright -->
+          <div
+            class="text-center p-3"
+            style="background-color: rgba(0, 0, 0, 0.2)"
+          >
+            &copy;2025 Copyright:
+            <a
+              class="text-white"
+              href="./we.html"
+              style="text-decoration: none"
+              ><span style="color: #0082ca">Solveo</span> . All rights reserved</a
+            >
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+      </div>
+      <!-- End Footer -->
+  
+<<<<<<< HEAD
+
+
+=======
+<script src="../JavaScript Pages/main.js"></script>
+>>>>>>> 60645e0c093b14582595a261cf330e2988042a1e
+    <script src="../JavaScript Pages/apply.js"></script>
+    <!-- BootStrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // حفظ حالة الامتحانات في Local Storage
+const exams = {
+  iq: false,
+  it: false,
+  en: false,
+};
+
+// التحقق من حالة الامتحانات عند التحميل
+document.addEventListener("DOMContentLoaded", () => {
+  const iqExamStatus = localStorage.getItem("iqExam");
+  const itExamStatus = localStorage.getItem("itExam");
+  const enExamStatus = localStorage.getItem("enExam");
+
+  if (iqExamStatus === "completed") {
+    document.querySelector(".applyTestButtonIQ").style.display = "none";
+    addResultButton("IQ Test", "resultIQ");
+  }
+
+  if (itExamStatus === "completed") {
+    document.querySelector(".applyTestButtonIT").style.display = "none";
+    addResultButton("IT Knowledge Test", "resultIT");
+  }
+
+  if (enExamStatus === "completed") {
+    document.querySelector(".applyTestButtonEN").style.display = "none";
+    addResultButton("English Proficiency Test", "resultEN");
+  }
+});
+
+// إضافة زر عرض النتائج
+function addResultButton(testName, resultClass) {
+  const resultButton = document.createElement("button");
+  resultButton.textContent = "Show Result";
+  resultButton.className = resultClass;
+  resultButton.addEventListener("click", () => {
+
+  });
+  document.querySelector(`.${resultClass}`).parentNode.appendChild(resultButton);
+}
+
+// إعداد الأحداث لبدء الاختبارات
+document.querySelector(".applyTestButtonIQ").addEventListener("click", () => {
+  localStorage.setItem("iqExam", "completed");
+});
+
+document.querySelector(".applyTestButtonIT").addEventListener("click", () => {
+  localStorage.setItem("itExam", "completed");
+});
+
+document.querySelector(".applyTestButtonEN").addEventListener("click", () => {
+  localStorage.setItem("enExam", "completed");
+});
+
+    </script>
+  </body>
+</html>
